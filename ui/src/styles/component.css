@@ -1,0 +1,22 @@
+/* Component styles */
+
+.card {
+	border-radius: var(--border-radius);
+	padding: var(--spacing);
+	background-color: white;
+	box-shadow: var(--box-shadow);
+	color: black;
+}
+
+button {
+	padding: var(--spacing-xs) var(--spacing-s);
+	border-radius: var(--border-radius-s);
+	border: none;
+	color: white;
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+
+	&:disabled {
+		opacity: 50%;
+	}
+}

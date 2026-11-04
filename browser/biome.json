@@ -1,0 +1,31 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"formatter": {
+		"enabled": false
+	},
+	"files": {
+		"ignoreUnknown": true
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "off"
+			}
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"nursery":  {
+				"useExplicitType": "error"
+			},
+			"suspicious": {
+				"noExplicitAny": "error"
+			},
+			"correctness": {
+				"noUnusedVariables": "error"
+			}
+		}
+	}
+}
+

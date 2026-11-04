@@ -1,0 +1,36 @@
+{
+	"scripts": {
+		"build": "vite build --base ./",
+		"serve": "http-server dist -p 1111",
+		"stryker:serve": "http-server public -p 1112",
+		"verify": "node ./scripts/verify.mjs",
+		"dev": "vite --host --port 15080",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.13",
+		"@stryker-mutator/core": "^9.5.0",
+		"@stryker-mutator/vitest-runner": "^9.5.0",
+		"@todo/browser": "../browser",
+		"@todo/core": "../core",
+		"@todo/ui": "../ui",
+		"@types/react": "^19.2.10",
+		"@types/react-dom": "^19.2.3",
+		"exportcase": "^1.2.5",
+		"http-server": "^14.1.1",
+		"randoma": "^2.0.1",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"rxjs": "^7.8.1",
+		"tasuku": "^2.0.7",
+		"temporal-polyfill": "^0.3.2",
+		"typescript": "^5.9.2",
+		"vite": "^7.3.1",
+		"vitest": "^4.0.18",
+		"zod": "^4.3.6"
+	},
+	"dependencies": {
+		"@types/qrcode": "^1.5.6",
+		"qrcode": "^1.5.4"
+	}
+}

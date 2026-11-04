@@ -1,0 +1,53 @@
+{
+	"$schema": "https://biomejs.dev/schemas/latest/schema.json",
+	"formatter": {
+		"enabled": false
+	},
+	"files": {
+		"ignoreUnknown": true
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "off"
+			}
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"nursery":  {
+				"useExplicitType": "error"
+			},
+			"suspicious": {
+				"noExplicitAny": "error"
+			},
+			"correctness": {
+				"noUnusedVariables": "error"
+			},
+			"style": {
+				"noRestrictedGlobals": {
+					"level": "error",
+					"options": {
+						"deniedGlobals": {
+							"Date": "Date is not allowed.",
+							"setInterval": "setInterval is not allowed.",
+							"setTimeout": "setTimeout is not allowed."
+						}
+					}
+				},
+				"noRestrictedImports": {
+					"level": "error",
+					"options": {
+						"paths": {
+							"vitest": {
+								"importNames": ["beforeEach", "afterEach", "vi"],
+								"message": "Do not import beforeEach, afterEach, or vi directly from 'vitest'. Each test must stay isolated instead of relying on shared setup or teardown. For mocking, prefer dedicated test doubles such as createTimeServiceMock() instead of vi."
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

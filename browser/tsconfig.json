@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"declaration": true,
+		"outDir": "dist",
+		"rootDir": "src",
+		"allowJs": true,
+		"moduleResolution": "nodenext",
+		"skipLibCheck": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"downlevelIteration": true,
+		"target": "ES2020",
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"module": "NodeNext",
+		"typeRoots": ["./node_modules/@types", "./src/types"]
+	},
+	"include": ["src/**/*", "src/types/**/*"]
+}
+

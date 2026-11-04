@@ -1,0 +1,33 @@
+{
+	"name": "Deciphraze",
+	"short_name": "Deciphraze",
+	"description": "Déchiffrez le paragraphe du jour en associant les lettres aux bons symboles",
+	"start_url": "/",
+	"display": "fullscreen",
+	"background_color": "#000000",
+	"theme_color": "#000000",
+	"lang": "fr",
+	"orientation": "portrait",
+	"categories": ["games", "puzzle"],
+	"icons": [
+		{
+			"src": "android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "pwa-install-preview.png",
+			"sizes": "1280x720",
+			"type": "image/png",
+			"platform": "narrow"
+		}
+	]
+}
+

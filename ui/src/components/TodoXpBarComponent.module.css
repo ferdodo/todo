@@ -1,0 +1,40 @@
+.container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: 4rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing);
+}
+
+.level {
+    grid-area: 1/1/2/2;
+    display: grid;
+    place-content: center;
+	background-color: white;
+	border-radius: var(--border-radius);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+	padding: var(--spacing);
+}
+
+
+.xpBase {
+	grid-area: 1/1/2/2;
+    background: var(--color-blue);
+    border-left: var(--border-size-bold) solid white;
+    border-top: var(--border-size-bold) solid white;
+    border-bottom: var(--border-size-bold) solid white;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.xp {
+	grid-area: 1/2/2/3;
+	border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border-right: var(--border-size-bold) solid white;
+    border-top: var(--border-size-bold) solid white;
+    border-bottom: var(--border-size-bold) solid white;
+}

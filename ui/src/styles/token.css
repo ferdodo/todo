@@ -1,0 +1,49 @@
+/* Design tokens */
+
+:root {
+	/* Spacing */
+	--border-radius: 18px;
+	--border-radius-s: 6px;
+	--spacing: 28px;
+	--spacing-s: 16px;
+	--spacing-xs: 10px;
+	--box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+	--font-size: 18px;
+	--font-weight: 600;
+	--border-size-bold: 1.5mm;
+	--border-size: 2px;
+
+	/* Color base tokens */
+	--lightness: 60%;
+	--chroma: 0.15;
+	--lightness-weak: 90%;
+	--lightness-strong: 52%;
+	--lightness-subtle: 96%;
+	--chroma-weak: 0.08;
+	--blue-tint: 255.94;
+	--orange-tint: 53.31;
+	--red-tint: 29.18;
+	--green-tint: 159.33;
+	/* alternative green 135.79 */
+	/* yellow 109.77 */
+
+	/* Color tokens in OKLCH */
+    --color-minimal: oklch(var(--lightness-subtle) 0 0);
+
+	--color-blue: oklch(var(--lightness) var(--chroma) var(--blue-tint));
+	--color-blue-weak: oklch(var(--lightness-weak) var(--chroma-weak) var(--blue-tint));
+
+	--color-green: oklch(var(--lightness) var(--chroma) calc(var(--green-tint)));
+	--color-green-weak: oklch(var(--lightness-weak) var(--chroma-weak) calc(var(--green-tint)));
+
+	--color-red: oklch(var(--lightness) var(--chroma) calc(var(--red-tint)));
+	--color-red-weak: oklch(var(--lightness-weak) var(--chroma-weak) calc(var(--red-tint)));
+	--color-red-strong: oklch(var(--lightness-strong) var(--chroma) calc(var(--red-tint)));
+
+	--color-orange: oklch(var(--lightness) var(--chroma) calc(var(--orange-tint)));
+	--color-orange-weak: oklch(var(--lightness-weak) var(--chroma-weak) calc(var(--orange-tint)));
+
+	/* Animation tokens */
+	--transform-duration: 800ms;
+	--transform-function: ease;
+}

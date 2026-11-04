@@ -1,0 +1,18 @@
+{
+	"name": "@todo/browser",
+	"version": "1.0.0",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"build": "vite build && tsc --emitDeclarationOnly",
+		"verify": "node ./scripts/verify.mjs"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.13",
+		"exportcase": "^1.2.5",
+		"tasuku": "^2.0.7",
+		"temporal-polyfill": "^0.3.2",
+		"typescript": "^5.9.2",
+		"vite": "^7.3.1"
+	}
+}

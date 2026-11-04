@@ -1,0 +1,23 @@
+{
+	"$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+	"testRunner": "vitest",
+	"ignoreStatic": true,
+	"thresholds": {
+		"high": 80,
+		"low": 75,
+		"break": 65
+	},
+	"vitest": {
+		"related": false
+	},
+	"reporters": ["progress", "html", "json", "clear-text"],
+	"htmlReporter": {
+		"fileName": "public/stryker-report.html"
+	},
+	"jsonReporter": {
+		"fileName": "public/stryker-report.json"
+	},
+	"clearTextReporter": {
+		"reportMutants": true
+	}
+}

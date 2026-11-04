@@ -1,0 +1,43 @@
+services:
+  ui:
+    build:
+      context: ui
+
+  browser:
+    build: browser
+
+  core:
+    build:
+      context: core
+      additional_contexts:
+        todo-git: service:git
+
+  git:
+    build:
+      context: .
+      dockerfile: git.Dockerfile
+
+  front:
+    build:
+      context: front
+      additional_contexts:
+        todo-ui: service:ui
+        todo-browser: service:browser
+        todo-core: service:core
+        todo-git: service:git
+    develop:
+      watch:
+        - action: sync
+          path: ./front/src
+          target: /todo/front/src
+        - action: sync
+          path: ./core/src
+          target: /todo/core/src
+        - action: sync
+          path: ./ui/src
+          target: /todo/ui/src
+        - action: sync
+          path: ./browser/src
+          target: /todo/browser/src
+    ports:
+      - "15080:15080"

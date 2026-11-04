@@ -1,0 +1,22 @@
+{
+	"$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+	"testRunner": "vitest",
+	"ignoreStatic": true,
+	"reporters": ["html", "json", "clear-text"],
+	"thresholds": {
+		"break": 75
+	},
+	"vitest": {
+		"related": false
+	},
+	"htmlReporter": {
+		"fileName": "public/stryker-report.html"
+	},
+	"jsonReporter": {
+		"fileName": "public/stryker-report.json"
+	},
+	"clearTextReporter": {
+		"reportMutants": true
+	},
+	"mutate": ["src/**/*.ts", "!src/**/mocks/**", "!src/**/fixtures/**"]
+}

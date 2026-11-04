@@ -1,0 +1,20 @@
+{
+	"name": "@todo/core",
+	"version": "1.0.0",
+	"description": "Core types and interfaces for TODO",
+	"type": "module",
+	"main": "./src/index.ts",
+	"scripts": {
+		"verify": "node ./scripts/verify.mjs"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.6",
+		"@stryker-mutator/core": "^9.6.1",
+		"@stryker-mutator/vitest-runner": "^9.6.1",
+		"exportcase": "^1.2.5",
+		"tasuku": "^2.3.0",
+		"temporal-polyfill": "^0.3.2",
+		"typescript": "^5.9.3",
+		"vitest": "^4.1.4"
+	}
+}

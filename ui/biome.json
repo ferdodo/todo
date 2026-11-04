@@ -1,0 +1,53 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"formatter": {
+		"enabled": false
+	},
+	"files": {
+		"ignoreUnknown": true
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "off"
+			}
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"nursery":  {
+				"useExplicitType": "error"
+			},
+			"suspicious": {
+				"noExplicitAny": "error"
+			},
+			"correctness": {
+				"noUnusedVariables": "error"
+			},
+			"style": {
+				"noRestrictedImports": {
+					"level": "error",
+					"options": {
+						"patterns": [
+							{
+								"group": "vitest",
+								"importNamePattern": "(beforeEach|afterEach|vi)"
+							},
+							{
+								"group": "react",
+								"importNamePattern": "useState",
+								"message": "UI components should be stateless. Use only props and handlers. State management belongs to the application component."
+							},
+							{
+								"group": "react",
+								"importNamePattern": "useRef",
+								"message": "useRef is not allowed in UI components. Use controlled components with props instead."
+							}
+						]
+					}
+				}
+			}
+		}
+	}
+}
